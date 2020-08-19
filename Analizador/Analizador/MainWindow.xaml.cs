@@ -26,11 +26,12 @@ namespace Analizador
         }
         public void Tabla()
         {
-            // Add columns
+            //Agregamos las columnas y las dimensionamos
             var gridView = new GridView();
             Lista.View = gridView;
             gridView.Columns.Add(new GridViewColumn
             {
+                //Le establecemos un nombre a la columna
                 Header = "Expresion",
                 DisplayMemberBinding = new Binding("Expresion"),
                 Width = 190
@@ -38,6 +39,7 @@ namespace Analizador
             });
             gridView.Columns.Add(new GridViewColumn
             {
+                //Le establecemos un nombre a la columna
                 Header = "Tipo",
                 DisplayMemberBinding = new Binding("Tipo"),
                 Width = 190
@@ -46,45 +48,49 @@ namespace Analizador
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //Llamamos el metodo para llenar la tabla
             Tabla();
             String expresionCompleta;
+            //Leemos la informacion del textbox
             expresionCompleta= expresiontxt.Text;
-            char delimitador = ' ';
-            String[] expresiones = expresionCompleta.Split(delimitador);
-            String[] palabras = new String[20];
-            String[] enteros = new String[20];
-            String[] decimales = new String[20];
+            //Declaramos como detectamos el cambio
+            char cambio = ' ';
+            //Usamos la funcion split para separar las palabras
+            String[] expresiones = expresionCompleta.Split(cambio);
             for (int i = 0; i < expresiones.Length ;i++)
             {
                 foreach (char letra in expresiones[i])
                 {
                     int numero = 0;
                     Double decimalesmuestra = 0.0;
+                    //Comprobamos si es una letra el caracter
                     if (Char.IsLetter(letra))
                     {
                        
                         char[] arraychar = expresiones[i].ToCharArray();
                         if (arraychar.Length > 1 && arraychar[0]=='Q' && arraychar[1]=='.')
                         {
-                            MessageBox.Show(expresiones[i] + " es moneda");
+                            //Agregamos el elemento a la Lista
                             Lista.Items.Add(new MyItem { Expresion = expresiones[i], Tipo = "Moneda" });
                         }
                         else
                         {
-                            MessageBox.Show(expresiones[i] + " es palabra");
+                            //Agregamos el elemento a la Lista
                             Lista.Items.Add(new MyItem { Expresion = expresiones[i], Tipo = "Palabra" });
                         }
                             break;
                     }
+                    //Comprobamos si la expresion es un numero entero
                     else if (int.TryParse(expresiones[i], out numero))
                     {
-                        MessageBox.Show(expresiones[i] + " es numero");
+                        //Agregamos el elemento a la Lista
                         Lista.Items.Add(new MyItem { Expresion = expresiones[i], Tipo = "Numero" });
                         break;
                     }
+                    //Comprobamos si la expresion es un numero decimal
                     else if (Double.TryParse(expresiones[i], out decimalesmuestra))
                     {
-                        MessageBox.Show(expresiones[i] + " es decimal");
+                        //Agregamos el elemento a la Lista
                         Lista.Items.Add(new MyItem { Expresion = expresiones[i], Tipo = "Decimal" });
                         break;
                     }
@@ -95,6 +101,7 @@ namespace Analizador
     }
     public class MyItem
     {
+        //Declaramos las columnas de nuestra lista
         public string Expresion { get; set; }
         public string Tipo { get; set; }
     }

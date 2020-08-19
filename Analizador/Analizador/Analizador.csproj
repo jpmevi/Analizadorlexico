@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="23627.jpg" />
+    <None Remove="Analizar.png" />
+    <None Remove="basura.png" />
+    <None Remove="basuralista.png" />
+    <None Remove="light-blue-triangulated-background-texture-vector.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="23627.jpg" />
+    <Resource Include="Analizar.png" />
+    <Resource Include="basura.png" />
+    <Resource Include="basuralista.png" />
+    <Resource Include="light-blue-triangulated-background-texture-vector.jpg" />
   </ItemGroup>
 
 </Project>
