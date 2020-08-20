@@ -98,6 +98,16 @@ namespace Analizador
                 }
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            expresiontxt.Text = "";
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Lista.Items.Clear();
+        }
     }
     public class MyItem
     {

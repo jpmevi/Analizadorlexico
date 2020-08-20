@@ -16,3 +16,4 @@ C:\Users\MAX11\Documents\Anlizador lexico\Analizadorlexico\Analizador\Analizador
 C:\Users\MAX11\Documents\Anlizador lexico\Analizadorlexico\Analizador\Analizador\obj\Debug\netcoreapp3.1\Analizador.dll
 C:\Users\MAX11\Documents\Anlizador lexico\Analizadorlexico\Analizador\Analizador\obj\Debug\netcoreapp3.1\Analizador.pdb
 C:\Users\MAX11\Documents\Anlizador lexico\Analizadorlexico\Analizador\Analizador\obj\Debug\netcoreapp3.1\Analizador.genruntimeconfig.cache
+C:\Users\MAX11\Documents\Anlizador lexico\Analizadorlexico\Analizador\Analizador\obj\Debug\netcoreapp3.1\Analizador.csprojAssemblyReference.cache

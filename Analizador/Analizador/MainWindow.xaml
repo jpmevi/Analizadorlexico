@@ -24,12 +24,8 @@
 				</GridView>
 			</ListView.View>
 		</ListView>
-		<Button x:Name="basuratexto" Content="" HorizontalAlignment="Left" Margin="220,34,0,0" VerticalAlignment="Top" Width="54" Click="Button_Click" Height="46" BorderBrush="{x:Null}">
-			<Button.Background>
-				<ImageBrush ImageSource="/basura.png"/>
-			</Button.Background>
-		</Button>
-		<Button x:Name="basuralista" Content="" HorizontalAlignment="Left" Margin="306,34,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Height="63" BorderBrush="{x:Null}">
+		<Button Content="Limpiar texto" HorizontalAlignment="Left" Margin="216,53,0,0" VerticalAlignment="Top" Height="27" Width="82" Click="Button_Click_1"/>
+		<Button Content="" HorizontalAlignment="Left" Height="54" Margin="319,26,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_2" BorderBrush="{x:Null}">
 			<Button.Background>
 				<ImageBrush ImageSource="/basuralista.png"/>
 			</Button.Background>
